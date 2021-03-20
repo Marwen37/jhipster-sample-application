@@ -1,0 +1,30 @@
+
+
+entity Client {
+  nom 				String
+  prenom			String
+  tel				String
+}
+
+entity Categorie {
+	code			String
+    description		String
+}
+
+entity Produit {
+	code			String
+    description		String
+    prix			BigDecimal
+    dateCreation	LocalDate
+}
+
+relationship OneToMany {
+Categorie to Produit{categorie(id)}
+}
+
+dto all with mapstruct
+service * with serviceClass
+paginate all with pagination
+filter *
+
+
